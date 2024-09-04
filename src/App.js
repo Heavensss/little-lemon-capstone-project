@@ -10,6 +10,7 @@ import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
 import Booking from "./components/Booking";
 import ConfirmedBooking from "./components/ConfirmedBooking";
+import { Testimonials } from "./components/Testimonials";
 
 function App() {
   const seededRandom = function (seed) {
@@ -63,7 +64,8 @@ function submitForm (formData) {
             <Route path="/confirmed" element={<ConfirmedBooking/> } />
           </Routes>
           <Header />
-          <SpecialSection/>   
+          <SpecialSection/> 
+          <Testimonials/>  
         </main>
           <Footer />
           <Alert/>

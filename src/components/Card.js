@@ -42,8 +42,8 @@ const Card = ({ id,title, price, description, imageSrc }) => {
     <Flex direction="column" rounded="x1" bgColor="#a9c8be">
          <Image src={imageSrc}/>
          <Flex justifyContent="space-between" px="5">
-            <Text fontSize ="2xl" fontWeight="semibold"  color="blackAlpha.800" > {title}</Text>
-             <Text fontSize="2xl" fontWeight="semibold" color="blackAlpha.800">N{price}</Text>
+            <Heading as="h3" size="" color="blackAlpha.700"> {title}</Heading>
+             <Text fontSize="2xl" fontWeight="semibold" color="blackAlpha.700">N{price}</Text>
          </Flex>
          <Text color="blackAlpha.700" px="5">{description}</Text>
          <Button colorScheme="yellow" mx="150" size="sm" my="5" onClick={() => handleOrder(id)} >Order now</Button>

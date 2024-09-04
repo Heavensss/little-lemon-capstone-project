@@ -1,10 +1,10 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Box, Heading } from "@chakra-ui/react";
+import { SimpleGrid, Box, Heading } from "@chakra-ui/react";
 import Card from "./Card";
 import Swal from "sweetalert2";
 
-const specials = [
+const projects = [
   {
     id: 1,
     title: "Nigerian Jollof Rice",
@@ -32,7 +32,7 @@ const specials = [
   
 ];
 
-const SpecialSection = () => {
+const ProjectsSection = () => {
   
   return (
     <FullScreenSection
@@ -42,28 +42,30 @@ const SpecialSection = () => {
       alignItems="flex-start"
       spacing={8}
     >
-      <Heading as="h1" id="projects-section" color="black">
+      <Heading as="h2" id="projects-section">
         This weeks specials
       </Heading>
-      <Box
-        display="grid"
-        gridTemplateColumns="repeat(3,minmax(0,1fr))"
-        gridGap={8}
-      >
-        {specials.map((special) => (
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+        {projects.map((project) => (
+           <Box
+           p={4}
+           shadow="md"
+           borderWidth="1px"
+           borderRadius="md"
+           bg="white"
+          >
           <Card
-            key={special.id}
-            title={special.title}
-            price={special.price}
-            description={special.description}
-            imageSrc={special.getImageSrc()}
-            
+            key={project.id}
+            title={project.title}
+            price={project.price}
+            description={project.description}
+            imageSrc={project.getImageSrc()}  
           />
-
+          </Box>
         ))}
-      </Box>
+      </SimpleGrid>
     </FullScreenSection>
   );
 };
 
-export default SpecialSection;
+export default ProjectsSection;

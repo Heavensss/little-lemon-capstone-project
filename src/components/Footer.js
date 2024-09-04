@@ -1,23 +1,25 @@
 import React from "react";
-import {Box, Flex} from "@chakra-ui/react";
+import {Box, Text,Link, Flex} from "@chakra-ui/react";
 
 const Footer = () => {
   return (
     <Box backgroundColor="#18181b">
       <footer>
         <Flex
-          margin="0 auto"
-          px={12}
-          color="white"
-          justifyContent="center"
-          alignItems="center"
-          maxWidth="1024px"
-          height={16}
+        bg="gray.200"
+        py={4}
+        justify="center"
+        align="center"
+        direction="column"
+        justifyContent="space-between"
+        alignItems="center"
+          
+          
+         
         >
-          <div>
-
-    
-          </div>
+        <Flex justify="center" align="center" mt={2}>
+          
+       
           <div>
                 <h3>Contact</h3>
             <ul>
@@ -32,9 +34,13 @@ const Footer = () => {
                 <li><a href="/">Facebook</a></li>
                 <li><a href="/">Instagram</a></li>
                 <li><a href="/">Twitter</a></li>
-                <p>Ebiakpo • © 2024</p>
+                
+              <Text>
+              Ebiakpo &copy; 2024 Our Company. All rights reserved.
+              </Text>
             </ul>
             </div>
+            </Flex>
         </Flex>
      
       </footer>
